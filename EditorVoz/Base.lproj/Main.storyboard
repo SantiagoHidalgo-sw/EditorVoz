@@ -1,24 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NKD-M9-SMS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EditorVoz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNE-Ts-z7s">
+                                <rect key="frame" x="-119.5" y="210" width="586" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="wNx-Jx-Wca"/>
+                                </constraints>
+                                <state key="normal" image="BotonGrabando">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="grabarAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jjg-lq-Ojh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presione para grabar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kib-UV-2N9">
+                                <rect key="frame" x="135" y="449" width="159" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="7uD-26-bLT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTz-xS-v7T">
+                                <rect key="frame" x="-48.5" y="327" width="512" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="4Bw-8R-2Je"/>
+                                    <constraint firstAttribute="height" constant="53" id="vtm-an-eEs"/>
+                                </constraints>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="dejarGrabar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ITM-rD-klM"/>
+                                    <segue destination="qQl-pA-ZaH" kind="show" id="Ocj-Sx-6OG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fNE-Ts-z7s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="122" id="196-9D-WkM"/>
+                            <constraint firstItem="VTz-xS-v7T" firstAttribute="centerX" secondItem="fNE-Ts-z7s" secondAttribute="centerX" constant="34" id="GiW-a6-zeS"/>
+                            <constraint firstItem="Kib-UV-2N9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="MGA-JS-Otb"/>
+                            <constraint firstItem="VTz-xS-v7T" firstAttribute="width" secondItem="fNE-Ts-z7s" secondAttribute="width" multiplier="1.82353" constant="-556.29411764705878" id="Qx6-72-wqr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kib-UV-2N9" secondAttribute="bottom" constant="336" id="RUn-hf-bo2"/>
+                            <constraint firstItem="VTz-xS-v7T" firstAttribute="top" secondItem="fNE-Ts-z7s" secondAttribute="bottom" constant="37" id="ZhJ-jT-avv"/>
+                            <constraint firstItem="VTz-xS-v7T" firstAttribute="centerX" secondItem="Kib-UV-2N9" secondAttribute="centerX" constant="-7" id="mEV-zc-p6R"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6yB-Bf-vuZ"/>
+                    <connections>
+                        <outlet property="dejarGrabar" destination="VTz-xS-v7T" id="qXT-UH-SFH"/>
+                        <outlet property="etiquetaGrabado" destination="Kib-UV-2N9" id="3HA-PS-fE8"/>
+                        <outlet property="grabarAudio" destination="fNE-Ts-z7s" id="3ZF-5p-d3n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1023.1884057971015" y="35.491071428571423"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FE1-Ca-BHn">
+            <objects>
+                <viewController id="qQl-pA-ZaH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ycr-n5-08g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lh4-VT-GHy"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2zB-0s-oTc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ue-aV-de8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="44"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nrm-y8-P3d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NKD-M9-SMS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DBm-hh-4BT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mQw-bK-XTO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ywz-ZN-zFj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="35.491071428571423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BotonGrabando" width="256" height="256"/>
+        <image name="Stop" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
