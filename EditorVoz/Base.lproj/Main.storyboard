@@ -82,14 +82,58 @@
                     <view key="view" contentMode="scaleToFill" id="ycr-n5-08g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="nNG-Na-Gcl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZd-PX-k6c" userLabel="Rapido">
+                                        <rect key="frame" x="0.0" y="603" width="138" height="171"/>
+                                        <state key="normal" image="Conejo"/>
+                                        <connections>
+                                            <action selector="reproducirSonidoWith_sender:" destination="qQl-pA-ZaH" eventType="touchUpInside" id="9DT-dl-pwi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8j-Td-pD0" userLabel="Stop">
+                                        <rect key="frame" x="138" y="744" width="138" height="30"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="pararSonidoWith_sender:" destination="qQl-pA-ZaH" eventType="touchUpInside" id="Zbf-tv-3lf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyb-pZ-Omt" userLabel="Tortuga">
+                                        <rect key="frame" x="276" y="262" width="138" height="512"/>
+                                        <inset key="imageEdgeInsets" minX="-3" minY="-3" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="Tortuga">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reproducirSonidoWith_sender:" destination="qQl-pA-ZaH" eventType="touchUpInside" id="TgJ-xe-Jzx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lh4-VT-GHy"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lh4-VT-GHy" firstAttribute="bottom" secondItem="nNG-Na-Gcl" secondAttribute="bottom" id="46Q-M4-2Kv"/>
+                            <constraint firstItem="nNG-Na-Gcl" firstAttribute="leading" secondItem="lh4-VT-GHy" secondAttribute="leading" id="IbZ-Xg-1gB"/>
+                            <constraint firstItem="lh4-VT-GHy" firstAttribute="trailing" secondItem="nNG-Na-Gcl" secondAttribute="trailing" id="NVk-Ja-VZp"/>
+                            <constraint firstItem="lh4-VT-GHy" firstAttribute="bottom" secondItem="nNG-Na-Gcl" secondAttribute="bottom" id="izb-gp-YYp"/>
+                            <constraint firstItem="nNG-Na-Gcl" firstAttribute="top" secondItem="lh4-VT-GHy" secondAttribute="top" id="yA1-c2-AYQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2zB-0s-oTc"/>
+                    <connections>
+                        <outlet property="botonLento" destination="nyb-pZ-Omt" id="UWo-AH-8n2"/>
+                        <outlet property="botonParar" destination="b8j-Td-pD0" id="hjd-Dv-EoV"/>
+                        <outlet property="botonRapido" destination="hZd-PX-k6c" id="6PJ-Hw-gxI"/>
+                        <outlet property="view" destination="nNG-Na-Gcl" id="OvN-7s-aDr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ue-aV-de8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1990" y="44"/>
+            <point key="canvasLocation" x="1989.8550724637682" y="43.526785714285715"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nrm-y8-P3d">
@@ -112,7 +156,9 @@
     </scenes>
     <resources>
         <image name="BotonGrabando" width="256" height="256"/>
+        <image name="Conejo" width="296" height="171"/>
         <image name="Stop" width="512" height="512"/>
+        <image name="Tortuga" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
