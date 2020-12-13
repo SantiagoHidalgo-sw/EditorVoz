@@ -16,13 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNE-Ts-z7s">
-                                <rect key="frame" x="-119.5" y="210" width="586" height="80"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presione para grabar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kib-UV-2N9">
+                                <rect key="frame" x="135" y="596.5" width="144" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTz-xS-v7T">
+                                <rect key="frame" x="182" y="677" width="50" height="53"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="wNx-Jx-Wca"/>
+                                    <constraint firstAttribute="height" constant="53" id="dZl-IO-6No"/>
                                 </constraints>
-                                <state key="normal" image="BotonGrabando">
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="dejarGrabar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ITM-rD-klM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNE-Ts-z7s">
+                                <rect key="frame" x="67" y="488" width="280" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" image="Grabando">
                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                     <color key="titleShadowColor" systemColor="systemOrangeColor"/>
                                 </state>
@@ -30,37 +43,20 @@
                                     <action selector="grabarAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jjg-lq-Ojh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presione para grabar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kib-UV-2N9">
-                                <rect key="frame" x="135" y="449" width="159" height="77"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="77" id="7uD-26-bLT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTz-xS-v7T">
-                                <rect key="frame" x="-48.5" y="327" width="512" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="4Bw-8R-2Je"/>
-                                    <constraint firstAttribute="height" constant="53" id="vtm-an-eEs"/>
-                                </constraints>
-                                <state key="normal" image="Stop"/>
-                                <connections>
-                                    <action selector="dejarGrabar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ITM-rD-klM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fNE-Ts-z7s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="122" id="196-9D-WkM"/>
-                            <constraint firstItem="VTz-xS-v7T" firstAttribute="centerX" secondItem="fNE-Ts-z7s" secondAttribute="centerX" constant="34" id="GiW-a6-zeS"/>
-                            <constraint firstItem="Kib-UV-2N9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="MGA-JS-Otb"/>
-                            <constraint firstItem="VTz-xS-v7T" firstAttribute="width" secondItem="fNE-Ts-z7s" secondAttribute="width" multiplier="1.82353" constant="-556.29411764705878" id="Qx6-72-wqr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kib-UV-2N9" secondAttribute="bottom" constant="336" id="RUn-hf-bo2"/>
-                            <constraint firstItem="VTz-xS-v7T" firstAttribute="top" secondItem="fNE-Ts-z7s" secondAttribute="bottom" constant="37" id="ZhJ-jT-avv"/>
-                            <constraint firstItem="VTz-xS-v7T" firstAttribute="centerX" secondItem="Kib-UV-2N9" secondAttribute="centerX" constant="-7" id="mEV-zc-p6R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VTz-xS-v7T" secondAttribute="bottom" constant="132" id="0Pl-Rn-gfD"/>
+                            <constraint firstItem="Kib-UV-2N9" firstAttribute="firstBaseline" secondItem="fNE-Ts-z7s" secondAttribute="baseline" constant="24.5" symbolType="layoutAnchor" id="Enx-DF-lhS"/>
+                            <constraint firstItem="Kib-UV-2N9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RSo-ed-C6Y"/>
+                            <constraint firstItem="fNE-Ts-z7s" firstAttribute="centerX" secondItem="VTz-xS-v7T" secondAttribute="centerX" id="VD3-yK-lfc"/>
+                            <constraint firstItem="Kib-UV-2N9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="WfP-CG-IFp"/>
+                            <constraint firstItem="VTz-xS-v7T" firstAttribute="top" secondItem="Kib-UV-2N9" secondAttribute="bottom" constant="60" id="dF3-XD-Q66"/>
+                            <constraint firstItem="fNE-Ts-z7s" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dZ4-Hj-eUB"/>
+                            <constraint firstItem="fNE-Ts-z7s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hWM-3t-Ul8"/>
+                            <constraint firstItem="VTz-xS-v7T" firstAttribute="centerX" secondItem="Kib-UV-2N9" secondAttribute="centerX" id="iDU-qq-kmL"/>
+                            <constraint firstItem="fNE-Ts-z7s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="mNN-be-T7W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6yB-Bf-vuZ"/>
@@ -83,27 +79,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hVT-hJ-CuZ">
+                                <rect key="frame" x="155" y="348" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8j-Td-pD0" userLabel="Stop">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="pararSonidoWith_sender:" destination="qQl-pA-ZaH" eventType="touchUpInside" id="Zbf-tv-3lf"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="nNG-Na-Gcl">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="-504" width="414" height="774"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZd-PX-k6c" userLabel="Rapido">
-                                        <rect key="frame" x="0.0" y="603" width="138" height="171"/>
-                                        <state key="normal" image="Conejo"/>
+                                        <rect key="frame" x="0.0" y="674" width="207" height="100"/>
+                                        <state key="normal" image="Rapido"/>
                                         <connections>
                                             <action selector="reproducirSonidoWith_sender:" destination="qQl-pA-ZaH" eventType="touchUpInside" id="9DT-dl-pwi"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8j-Td-pD0" userLabel="Stop">
-                                        <rect key="frame" x="138" y="744" width="138" height="30"/>
-                                        <state key="normal" title="Stop"/>
-                                        <connections>
-                                            <action selector="pararSonidoWith_sender:" destination="qQl-pA-ZaH" eventType="touchUpInside" id="Zbf-tv-3lf"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyb-pZ-Omt" userLabel="Tortuga">
-                                        <rect key="frame" x="276" y="262" width="138" height="512"/>
+                                        <rect key="frame" x="207" y="674" width="207" height="100"/>
                                         <inset key="imageEdgeInsets" minX="-3" minY="-3" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="Tortuga">
+                                        <state key="normal" image="Lento">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                         </state>
                                         <connections>
@@ -116,11 +116,13 @@
                         <viewLayoutGuide key="safeArea" id="lh4-VT-GHy"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lh4-VT-GHy" firstAttribute="bottom" secondItem="nNG-Na-Gcl" secondAttribute="bottom" id="46Q-M4-2Kv"/>
+                            <constraint firstItem="lh4-VT-GHy" firstAttribute="bottom" secondItem="nNG-Na-Gcl" secondAttribute="bottom" constant="592" id="46Q-M4-2Kv"/>
                             <constraint firstItem="nNG-Na-Gcl" firstAttribute="leading" secondItem="lh4-VT-GHy" secondAttribute="leading" id="IbZ-Xg-1gB"/>
                             <constraint firstItem="lh4-VT-GHy" firstAttribute="trailing" secondItem="nNG-Na-Gcl" secondAttribute="trailing" id="NVk-Ja-VZp"/>
-                            <constraint firstItem="lh4-VT-GHy" firstAttribute="bottom" secondItem="nNG-Na-Gcl" secondAttribute="bottom" id="izb-gp-YYp"/>
-                            <constraint firstItem="nNG-Na-Gcl" firstAttribute="top" secondItem="lh4-VT-GHy" secondAttribute="top" id="yA1-c2-AYQ"/>
+                            <constraint firstItem="b8j-Td-pD0" firstAttribute="centerY" secondItem="ycr-n5-08g" secondAttribute="centerY" id="bKo-Fm-cER"/>
+                            <constraint firstItem="lh4-VT-GHy" firstAttribute="bottom" secondItem="nNG-Na-Gcl" secondAttribute="bottom" constant="592" id="izb-gp-YYp"/>
+                            <constraint firstItem="b8j-Td-pD0" firstAttribute="centerX" secondItem="ycr-n5-08g" secondAttribute="centerX" id="rOH-jW-euD"/>
+                            <constraint firstItem="nNG-Na-Gcl" firstAttribute="top" secondItem="lh4-VT-GHy" secondAttribute="top" constant="-592" id="yA1-c2-AYQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2zB-0s-oTc"/>
@@ -155,10 +157,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BotonGrabando" width="256" height="256"/>
-        <image name="Conejo" width="296" height="171"/>
-        <image name="Stop" width="512" height="512"/>
-        <image name="Tortuga" width="512" height="512"/>
+        <image name="Grabando" width="100" height="100"/>
+        <image name="Lento" width="100" height="100"/>
+        <image name="Rapido" width="100" height="100"/>
+        <image name="Stop" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

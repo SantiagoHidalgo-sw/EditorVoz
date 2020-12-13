@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "tortuga.png",
+      "filename" : "record_100.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "record_200.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "record_300.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

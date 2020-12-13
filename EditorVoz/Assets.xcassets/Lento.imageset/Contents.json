@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "micro.png",
+      "filename" : "slow_100.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "micro-1.png",
+      "filename" : "slow_200.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "micro-2.png",
+      "filename" : "slow_300.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
